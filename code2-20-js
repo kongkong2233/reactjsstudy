@@ -1,0 +1,14 @@
+const jsxElement = <h1 className="test">Hello, JSX!</h1>;
+const objElement = React.createElement(
+    'h1',
+    {className: 'test'},
+    'Hello, Object!'
+);
+
+ReactDOM.render(
+    <div>
+      {jsxElement}
+      {objElement}
+    </div>,
+    document.getElementById('root')
+);

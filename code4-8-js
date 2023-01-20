@@ -1,0 +1,15 @@
+function NumberType(props) {
+    if (props.number % 2 == 0) {
+        return <h1>{props.number}는(은) 짝수입니다.</h1>;
+    } else {
+        return <h1>{props.number}는(은) 홀수입니다.</h1>;
+    }
+}
+
+ReactDOM.render(
+    <div>
+        <NumberType number="2" />
+        <NumberType number="3" />
+    </div>,
+    document.getElementById('root')
+);

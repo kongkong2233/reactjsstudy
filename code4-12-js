@@ -1,0 +1,22 @@
+function Name(props) {
+    return <h1>저의 이름은 {props.name}</h1>;
+}
+
+function Jab(props) {
+    return <h1>저의 직업은 {props.jab}</h1>;
+}
+
+const userInfo = {
+    name: Name,
+    jab: Jab
+}
+
+function UserInfo(props) {
+    let Name = userInfo[props.type];
+    return <Name name={props.name} />
+}
+
+ReactDOM.render(
+    <UserInfo type="name" name="yubin" />,
+    document.getElementById('root')
+);

@@ -1,0 +1,16 @@
+const UserInfo = {
+    Name: function (props) {
+        return <h1>저의 이름은 {props.name}</h1>;
+    },
+    Jab: function (props) {
+        return <h1>저의 직업은 {props.jab}</h1>;
+    }
+}
+
+ReactDOM.render(
+    <div>
+        <UserInfo.Name name="yubin" />
+        <UserInfo.Jab jab="student" />
+    </div>,
+    document.getElementById('root')
+);

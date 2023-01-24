@@ -1,0 +1,35 @@
+function Post(props) {
+    return (
+        <div className="post">
+            <div className="postTitle">
+                <div className="title">
+                  <h1>제목: {props.title}</h1>
+                </div>
+                <div className="subTitle">
+                  <h2>부제: {props.subTitle}</h2>
+                </div>
+            </div>
+            <div className="postDate">
+               <div className="createDate">
+                 <p>최초 생성 날짜: {props.createDate}</p>
+               </div>
+               <div className="modifyDate">
+                 <p>마지막 수정 날짜: {props.modifyDate}</p>
+                </div>
+          </div>
+          <div className="postContents">
+              {props.contents}
+          </div>
+       </div>
+    );
+}
+
+ReactDOM.render(
+    <Post title="React.JS"
+      subtitle="Components"
+      createDate="0000-00-00"
+      modifyDate="1111-11-11"
+      contents="React.JS의 Components에 관련된 포스팅입니다." />,
+  
+    document.getElementById('root')
+)

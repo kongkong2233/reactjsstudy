@@ -1,0 +1,10 @@
+function Square(props) {
+  return (
+    <h1>{props.number} squire is {props.number * props.number}</h1> // 2 squire is 2*2
+  );
+}
+
+ReactDOM.render(
+  <Square number="2" />, //props에 2저장
+  document.getElementById('root')
+);

@@ -1,0 +1,52 @@
+function PostTitle(props) { //제목 부분 컴포넌트
+    return (
+        <div className="PostTitle">
+            <div className="title">
+                <h1>제목 : {props.title}</h1>
+            </div>
+            <div className="subTitle">
+              <h2>부제 : {props.subTitle}</h2>
+            </div>
+        </div>
+    );
+}
+
+function PostDate(props) { //날짜 부분 컴포넌트
+    return (
+        <div className="postDate">
+            <div className="createDate">
+              <p>최초 생성 날짜: {props.createDate}</p>
+            </div>
+            <div className="modifyDate">
+              <p>마지막 수정 날짜: {props.modifyDate}</p>
+            </div>
+        </div>
+    );
+}
+
+function PostContents(props) { //내용 부분 컴포넌트
+    return (
+        <div className="postContents">
+            {props.contents}
+        </div>
+    );
+}
+
+function Post(props) { //3개 컴포넌트 합성
+    return (
+      <div className="post">
+        <PostTitle title={props.title} subTitle={props.subtitle} />
+        <PostDate createDate={props.createDate} modifyDate={props.modifyDate} />
+        <PostContents contents={props.contents} />
+      </div>
+    );
+}
+
+ReactDOM.render(
+    <Post title="React.JS"
+        subTitle="Components"
+        createDate="0000-00-00"
+        modifyDate="1111-11-11"
+        contents="React.JS의 Components 공부 포스팅입니다." />,
+    document.getElementById('root')
+);

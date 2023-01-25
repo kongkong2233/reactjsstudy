@@ -1,0 +1,14 @@
+function UserInfo(props) {
+  return (
+    <h1>{props.data.job}, {props.data.name} 입니다. </h1>
+  );
+}
+
+let userData = {
+  name: "yubin",
+  job: "student"
+}
+ReactDOM.render(
+  <UserInfo data={userData} />,
+  document.getElementById('root')
+);

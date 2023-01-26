@@ -1,0 +1,8 @@
+function UndefinedChildren(props) {
+  return <h3>{props.children === undefined ? "undefined" : JSON.stringify(props.children)}</h3>;
+}
+
+ReactDOM.render(
+  <UndefinedChildren />,
+  document.getElementById('root')
+);

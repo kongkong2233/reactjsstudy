@@ -1,0 +1,12 @@
+class Square extends React.Component {
+  render() {
+    return (
+      <h1>{this.props.number} squire is {this.props.number * this.props.number}</h1>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Square number="2" />,
+  document.getElementById('root')
+);

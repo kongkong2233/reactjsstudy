@@ -1,0 +1,8 @@
+function StringChildren(props) {
+  return <h3>{JSON.stringify(props.children)}</h3>;
+}
+
+ReactDOM.render(
+  <StringChildren>문자열입니다.</StringChildren>,
+  document.getElementById('root')
+);

@@ -1,0 +1,19 @@
+class UserInfo extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>제 이름은 {this.props.name} 입니다.</h1>
+        <h1>제 직업은 {this.props.job} 입니다.</h1>
+      </div>
+    );
+  }
+}
+
+UserInfo.defaultProps = {
+  job: 'student'
+}
+
+ReactDOM.render(
+  <UserInfo name="yubin" />,
+  document.getElementById('root')
+);
